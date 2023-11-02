@@ -1,0 +1,502 @@
+.navbar {
+    background-color: rgb(245, 245, 245);
+    height: 60px;
+}
+
+.titnavv:hover,
+.nav-link:hover,
+.itemsfooter:hover,
+.dropdown-item:hover {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+.imgred1,
+.imgred2,
+.imgred3 {
+    transition: 0.3s;
+}
+
+.imgred1:hover {
+    text-decoration: none;
+    color: black;
+    width: 65px;
+    margin-right: 115px;
+}
+
+.imgred2:hover,
+.imgred3:hover {
+    text-decoration: none;
+    color: black;
+    width: 60px;
+}
+
+.dropdown-item {
+    margin-right: 20px;
+    transition: font-size 0.5s;
+}
+
+.nav-link {
+    margin-left: 20px;
+    transition: font-size 0.5s;
+}
+
+.titnav {
+    color: black;
+    font-size: 36px;
+    font-weight: bold;
+    margin-left: 150px;
+}
+
+.itemsnav li {
+    padding: 5px;
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+.itemsnav a,
+.divfooter a {
+    color: rgba(194, 142, 143, 255);
+
+}
+
+.divfooter {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+}
+
+.divfooter a {
+    font-size: 20px;
+    margin-top: 35px;
+}
+
+.imglogoprin {
+    margin-top: 15px;
+    height: 60px;
+    margin-left: 10px;
+}
+
+.itemsfooter {
+    
+    margin-left: 65px;
+    transition: font-size 0.5s;
+}
+
+.imgred1,
+.imgred2,
+.imgred3 {
+    width: 40px;
+    margin-top: 20px;
+    float: right;
+}
+
+.imgred1 {
+    margin-right: 120px;
+}
+
+.gallery-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%; 
+    max-width: 100%; 
+}
+
+.gallery {
+    display: flex;
+    transition: transform 1.5s ease-in-out;
+    width: 100%; /* Fija el ancho al 100% del contenedor .gallery-container */
+    max-width: none; /* Elimina el ancho máximo para que se ajuste automáticamente */
+    height: auto;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery-item {
+    flex: 0 0 auto;
+    opacity: 0;
+}
+
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+.userlogo {
+    width: 40px;
+}
+
+.dpdow {
+    color: black;
+    margin: 10px;
+}
+
+.OPCMOV {
+    display: none;
+}
+
+.OPCMOV .dpdow {
+    font-size: 25px;
+}
+
+.imgnosotros {
+    width: 100%;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f4;
+    
+}
+
+/* Estilo de la barra lateral */
+.sidebar {
+    width: 270px;
+    background-color: rgba(194, 142, 143, 255);
+    color: #fff;
+    padding: 20px;
+    border-radius: 22px;
+    height: 98vh;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo h2 {
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+
+.sidebar ul.menu {
+    list-style: none;
+    padding: 15px;
+    margin-top: 60px;
+}
+
+.sidebar ul.menu li {
+    margin-bottom: 30px;
+}
+
+.sidebar ul.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    
+}
+
+.sidebar ul.menu a:hover {
+    color: #000000;
+}
+
+/* Estilo del contenido principal */
+.content {
+    flex: 1;
+    padding: 10px;
+}
+
+.header {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.user-info h2 {
+    font-size: 22px;
+    color: #333;
+}
+
+.main-content {
+    background-color: #fff;
+    padding: 20px;
+    height: 85vh;
+    border-radius: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.main-content h3 {
+    font-size: 20px;
+    padding: 20px;
+}
+
+.section {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    height: 265px;
+}
+.section_pedidos {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    overflow-y: auto;
+    height: 38vh;
+    width: 1280px;
+    text-align: center;
+}
+.section_pedidos table {
+    margin: 0 auto; /* Centra horizontalmente */
+    width: 100%; /* Asegura que la tabla ocupe todo el ancho disponible en el div */
+}
+
+.sectionPROD1 {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    height: 80vh;
+    width: 950px;
+    overflow-y: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    text-align: center;
+}
+.sectionPROD2 {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    height: 80vh;
+    width: 110%;
+    overflow-y: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    text-align: center;
+}
+.sectionPROD3 {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    height: 80vh;
+    width: 1270px;
+    overflow-y: auto;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    text-align: center;
+}
+.formINSERTAR{
+    padding: 20px;
+}
+.formINSERTAR label{
+    font-size: 20px;
+    font-style:oblique;
+}
+.formINSERTAR input{
+    height: 30px;
+    width: 220px;
+}
+.section h3 {
+    font-size: 18px;
+    margin-bottom: 0px;
+    color: #000000;
+}
+
+.section span {
+    font-size: 13px;
+    margin-bottom: 0px;
+    color: #7c7c7c;
+}
+
+/* Estilos para las filas y columnas */
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.col {
+    flex: 1;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.cole {
+    flex: 0;
+    padding-left: 20px;
+}
+
+.col-6 {
+    flex: 0 0 50%; /* Cada div ocupa el 50% del ancho */
+}
+.listaprod{
+    width: 80%;
+}
+
+.listaprod span{
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.listaprod li{
+    font-size: 16px;
+    margin-left: 30px;
+}
+
+.listaproddiv{
+    display: flex;
+    justify-content: center;
+}
+
+.circle {
+    width: 130px; 
+    height: 130px; 
+    background-color:#fbfbfb ;
+    border-radius: 50%;
+    border: 11px solid rgba(194, 142, 143, 255); 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 10px auto; 
+    font-size: 38px; 
+    color: #000000; /
+}
+.circleR {
+    width: 90px; 
+    height: 90px; 
+    background-color:#fbfbfb ;
+    border-radius: 50%;
+    border: 8px solid #44ff00; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 10px auto; 
+    font-size: 34px; 
+    color: #000000; /
+}
+.circleP {
+    width: 90px; 
+    height: 90px; 
+    background-color:#fbfbfb ;
+    border-radius: 50%;
+    border: 8px solid #ff0000; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 10px auto; 
+    font-size: 34px; 
+    color: #000000; /
+}
+
+.pedidosDB{
+    display: flex;
+    justify-content: center
+}
+.itemPDB{
+    padding: 30px;
+}
+@media (max-width: 768px) {
+    .titnav {
+        font-size: 30px;
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+
+    .itemsnav li {
+        font-size: 10px;
+    }
+
+    .userlogo {
+        width: 30px;
+    }
+
+    .dpdow {
+        margin: 5px;
+    }
+
+    .navbar {
+        height: 90px;
+    }
+
+    .gallery img {
+        max-width: 100%;
+        height: 220px;
+    }
+
+
+    .OPCPC {
+        display: none;
+    }
+
+    .OPCMOV {
+        display: block;
+    }
+
+    .nav-link:hover {
+        font-size: 25px;
+    }
+
+    .divfooter {
+        position: relative;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+
+    .divfooter a {
+        font-size: 18px;
+        display: block;
+        align-items: center;
+    }
+
+    .itemsfooter {
+        justify-content: center;
+        text-align: center;
+        text-align: center;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+    .redesfooter {
+        text-align: center;
+        margin: 20 px auto;
+    }
+
+    .imglogoprin {
+        margin: auto;
+        width: 180px;
+        height: auto;
+    }
+
+    .imgred1 {
+        margin-right: none;
+    }
+
+    .imgred1,
+    .imgred3,
+    .imgred2 {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+}

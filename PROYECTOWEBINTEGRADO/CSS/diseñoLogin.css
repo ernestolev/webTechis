@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    width: 600px;
+    overflow-x: auto;
+    height: 80vh;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 40px;
+}
+
+.login-container-reclamo {
+    width: 600px;
+    overflow-x: auto;
+    height: 80vh;
+    overflow-x: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 40px;
+}
+
+
+.labels-log {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.label-log {
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+.log-items .btn {
+    background-color: rgba(194, 142, 143, 255);
+    color: white;
+    width: auto;
+    margin-top: 20px;
+    float: right;
+    font-size: 20px;
+}
+
+.log-items .btn:hover {
+    background-color: rgba(255, 78, 141, 255);
+    color: white;
+}
+
+.log-items .olvidepw {
+    margin-left: 20px;
+    color: rgb(128, 128, 128);
+    font-weight: lighter;
+}
+
+.log-items .olvidepw:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.log-items .volver {
+    float: right;
+    color: rgb(128, 128, 128);
+    font-weight: lighter;
+}
+
+.log-items .volver:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.form-select {
+    width: 150px;
+    height: 40px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.close-popup {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+    .login-container {
+        width: 90%;
+        padding: 13px;
+        border-radius: 18px;
+    }
+
+    .login-container-reclamo {
+        width: 90%;
+        padding: 13px;
+        border-radius: 18px;
+    }
+
+    .labels-log h1 {
+        font-size: 26px;
+    }
+
+    .labels-log label {
+        font-size: 13px;
+    }
+
+    .log-items .olvidepw {
+        font-size: 13px;
+    }
+
+    .log-items .volver {
+        font-size: 13px;
+    }
+
+    .log-items .btn {
+        margin-top: 30px;
+        width: 100%;
+        float: none;
+        font-size: 20px;
+    }
+
+}

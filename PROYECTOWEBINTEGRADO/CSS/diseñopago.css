@@ -1,0 +1,790 @@
+.navbar {
+    background-color: rgb(245, 245, 245);
+    height: 60px;
+}
+
+.titnavv:hover,
+.nav-link:hover,
+.itemsfooter:hover,
+.dropdown-item:hover {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
+.imgred1,
+.imgred2,
+.imgred3 {
+    transition: 0.3s;
+}
+
+.imgred1:hover {
+    text-decoration: none;
+    color: black;
+    width: 65px;
+    margin-right: 115px;
+}
+
+.imgred2:hover,
+.imgred3:hover {
+    text-decoration: none;
+    color: black;
+    width: 60px;
+}
+
+.dropdown-item {
+    margin-right: 20px;
+    transition: font-size 0.5s;
+}
+
+.nav-link {
+    margin-left: 20px;
+    transition: font-size 0.5s;
+}
+
+.titnav {
+    color: black;
+    font-size: 36px;
+    font-weight: bold;
+    margin-left: 150px;
+}
+
+.itemsnav li {
+    padding: 5px;
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+.itemsnav a,
+.divfooter a {
+    color: rgba(194, 142, 143, 255);
+
+}
+
+.imgbanner {
+    width: 100%;
+}
+
+.divfooter {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+}
+
+.divfooter a {
+    font-size: 20px;
+    margin-top: 35px;
+}
+
+.imglogoprin {
+    height: 50px;
+    margin-left: 20px;
+}
+
+.itemsfooter {
+    margin-left: 55px;
+    transition: font-size 0.5s;
+}
+
+.imgred1,
+.imgred2,
+.imgred3 {
+    width: 40px;
+    margin-top: 10px;
+    float: right;
+}
+
+.imgred1 {
+    margin-right: 120px;
+}
+
+.gallery-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery {
+    display: flex;
+    transition: transform 1.5s ease-in-out;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery-item {
+    flex: 0 0 auto;
+    opacity: 0;
+}
+
+
+
+.next-button {
+    right: 10px;
+}
+
+.userlogo {
+    width: 40px;
+}
+
+.dpdow {
+    color: black;
+    margin: 10px;
+}
+
+.OPCMOV {
+    display: none;
+}
+
+.OPCMOV .dpdow {
+    font-size: 25px;
+}
+
+.secciones {
+    display: flex;
+    width: 800px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.secciones img {
+    width: 50px;
+    margin-left: 30px;
+    float: left;
+    margin-right: 0px;
+    transform: translateY(-20%);
+}
+
+.secciones strong {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.secciones a {
+    margin-top: 10px;
+    color: black;
+    overflow: hidden;
+    width: 20px;
+    flex: 1;
+    padding: 25px;
+    transition: transform 0.18s ease-in-out;
+
+}
+
+.secciones a:hover {
+    text-decoration: none;
+    color: black;
+    transform: translateY(5%);
+}
+
+.busqueda {
+    width: 1600px;
+    display: flex;
+    margin-top: 30px;
+}
+
+.busqueda input {
+    width: 200px;
+    margin-right: 20px;
+    margin-left: 200px;
+}
+
+.busqueda select {
+    width: 200px;
+    height: 37px;
+}
+
+.busqueda button {
+    width: 50px;
+    margin-left: -30px;
+    height: 37px;
+    margin-right: 25px;
+}
+
+.busqueda .carritocompras {
+    color: black;
+    margin-left: 800px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: auto;
+    padding-left: 300px;
+    padding-right: 300px;
+    margin: 50px auto;
+}
+
+.columna {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.fila {
+    display: flex;
+    justify-content: space-between;
+}
+
+.elemento {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 25px;
+    transition: transform 0.18s ease-in-out;
+}
+
+.elemento:hover {
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1%);
+}
+
+.elemento p {
+    padding: 20px;
+}
+
+.elemento img {
+    width: 250px;
+    height: 300px;
+    object-fit: scale-down;
+}
+
+.elemento button {
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.elemento button:hover {
+    margin-bottom: 20px;
+    background-color: rgba(194, 142, 143, 255);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.568);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-contenido {
+    background-color: white;
+    padding: 40px;
+    width: 50%;
+    max-height: 80vh;
+    overflow-y: auto;
+    margin: 100px auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: relative;
+}
+
+.cerrar-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+a#mostrarPopup {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+a#mostrarPopup:hover {
+    text-decoration: underline;
+}
+
+.resumen-carrito {
+    display: flex;
+    padding: 15px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.resumen-carrito button {
+    margin-left: 100px;
+}
+
+.precio-resumen {
+    margin-left: 60px;
+    margin-bottom: 5px;
+}
+
+.item-carrito {
+    margin: 20px auto;
+    position: static;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    border-radius: 20px;
+}
+
+.item-carrito img {
+    width: 180px;
+    height: 180px;
+    object-fit: scale-down;
+}
+
+.item-carrito strong {
+    margin-right: 20px;
+    margin-left: 40px;
+}
+
+.item-carrito button {
+    margin-right: 6px;
+    height: 37px;
+}
+
+.item-carrito input {
+    width: 80px;
+    height: 37px;
+}
+
+.login-container {
+    width: 60%;
+    height: 80vh;
+    margin: 20px auto;
+    overflow-x: auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.pago-check {
+    margin: 100px auto;
+    width: 400px;
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+
+.pago-check img {
+    width: 200px;
+}
+
+.login-container button {
+    transform: translateY(-120%);
+}
+
+.labels-log {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    margin-top: 0px;
+}
+
+.log-items .btn {
+    background-color: rgba(194, 142, 143, 255);
+    color: white;
+    margin-top: 30px;
+    width: auto;
+    float: right;
+    font-size: 20px;
+}
+
+.log-items .btn:hover {
+    background-color: rgba(255, 78, 141, 255);
+    color: white;
+}
+
+.form-select {
+    width: 150px;
+    height: 40px;
+}
+
+.imagenespago img {
+    width: 60px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+@media (max-width: 768px) {
+    .titnav {
+        font-size: 30px;
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+
+    .itemsnav li {
+        font-size: 10px;
+    }
+
+    .userlogo {
+        width: 30px;
+    }
+
+    .dpdow {
+        margin: 5px;
+    }
+
+    .navbar {
+        height: 90px;
+    }
+
+    .gallery img {
+        max-width: 100%;
+        height: 220px;
+    }
+
+    .prev-button,
+    .next-button {
+        width: 25px;
+        border-radius: 40px;
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .OPCPC {
+        display: none;
+    }
+
+    .OPCMOV {
+        display: block;
+    }
+
+    .nav-link:hover {
+        font-size: 25px;
+    }
+
+    .divfooter {
+        position: relative;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        margin-top: 0px;
+    }
+
+    .divfooter a {
+        font-size: 18px;
+        display: block;
+        align-items: center;
+    }
+
+    .itemsfooter {
+        justify-content: center;
+        text-align: center;
+        text-align: center;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+    .redesfooter {
+        text-align: center;
+        margin: 20 px auto;
+    }
+
+    .imglogoprin {
+        margin: auto;
+        width: 180px;
+        height: auto;
+    }
+
+    .imgred1 {
+        margin-right: none;
+    }
+
+    .imgred1,
+    .imgred3,
+    .imgred2 {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .secciones {
+        display: flex;
+        width: 90%;
+        margin: auto;
+    }
+
+    .secciones img {
+        width: 50px;
+        margin-left: 0px;
+        float: left;
+        margin-right: 20px;
+        transform: translateX(20%);
+    }
+
+    .secciones strong {
+        display: none;
+    }
+
+    .secciones a {
+        margin-left: 5px;
+        width: 18px;
+        flex: 1;
+        padding: 20px;
+    }
+
+    .busqueda {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .busqueda input {
+        width: 250px;
+        margin: 10px auto;
+    }
+
+    .busqueda select {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -22px;
+        margin-bottom: 25px;
+        width: 250px;
+        height: 37px;
+        transform: translateY(0%);
+    }
+
+    .busqueda button {
+        width: 250px;
+        margin: auto;
+        height: 37px;
+    }
+
+    .busqueda .carritocompras {
+        font-size: 20px;
+        margin: auto;
+        transform: translateX(0%);
+    }
+
+    .contenedor {
+        display: block;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .columna {
+        flex: 1;
+        padding: 0px;
+        box-sizing: border-box;
+        margin: 0px;
+        width: 100%;
+    }
+
+    .fila {
+        display: block;
+    }
+
+    .elemento {
+        display: block;
+        flex-direction: column;
+        height: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+        margin: 20px;
+    }
+
+    .elemento p {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .elemento img {
+        width: 250px;
+        height: 300px;
+        object-fit: scale-down;
+    }
+
+    .elemento button {
+        margin-top: 20px;
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.568);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .popup-contenido {
+        background-color: white;
+        padding: 10px;
+        width: 95%;
+        max-height: 80vh;
+        overflow-y: auto;
+        margin: 80px auto;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+    }
+
+    .cerrar-popup {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    a#mostrarPopup {
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+    }
+
+    a#mostrarPopup:hover {
+        text-decoration: underline;
+    }
+
+    .resumen-carrito {
+        display: block;
+        padding: 18px;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .resumen-carrito button {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .precio-resumen {
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 20px;
+    }
+
+    .item-carrito {
+        margin: 20px auto;
+        position: static;
+        padding: 20px;
+        width: 95%;
+        height: 350px;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+    }
+
+    .item-carrito img {
+        width: 120px;
+        height: 120px;
+        object-fit: scale-down;
+    }
+
+    .item-carrito h5 {
+        margin-top: 20px;
+    }
+
+    .item-carrito strong {
+        margin: 20px auto;
+    }
+
+    .item-carrito button {
+        margin: 15px auto;
+        height: 37px;
+    }
+
+    .item-carrito input {
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        width: 80px;
+        height: 37px;
+    }
+
+    .login-container {
+        width: 95%;
+        height: 80vh;
+        margin: 40px auto;
+        overflow-x: auto;
+        padding: 15px;
+        background-color: white;
+        border-radius: 40px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .pago-check {
+        margin: 10px auto;
+        width: 50%;
+        display: block;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .pago-check img {
+        width: 100px;
+        margin-top: 50px;
+    }
+
+    .login-container button {
+        transform: translateY(-120%);
+    }
+
+    .labels-log {
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        margin-top: 25px;
+    }
+
+    .log-items .btn {
+        margin-top: 30px;
+        width: 100%;
+        float: none;
+        font-size: 20px;
+    }
+
+    .form-select {
+        width: 150px;
+        height: 40px;
+    }
+
+    .imagenespago img {
+        width: 60px;
+        height: 45px;
+        object-fit: cover;
+        border-radius: 10%;
+    }
+
+    .table-hover {
+        max-width: 100%;
+        font-size: 10px;
+    }
+}
