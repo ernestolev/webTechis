@@ -6,8 +6,19 @@ if (!isset($_SESSION['user'])) {
     header("Location: ../FORMS-LOGIN-REGISTRO/login.php");
 }
 
-$sql = "SELECT P_imagen, P_nom, P_desc, P_precio FROM productos WHERE P_tipo = 'porcion'";
+$sql = "SELECT * FROM productos WHERE P_tipo = 'porcion'";
 $result = mysqli_query($conn, $sql);
+
+$userId = $_SESSION['user'];
+$countQuery = "SELECT COUNT(*) AS cantidad_productos FROM carrito WHERE U_id = '$userId'";
+$countResult = mysqli_query($conn, $countQuery);
+
+if ($countResult) {
+    $row = mysqli_fetch_assoc($countResult);
+    $cantidad_productos = $row['cantidad_productos'];
+} else {
+    $cantidad_productos = 0;
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -15,7 +26,7 @@ $result = mysqli_query($conn, $sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tortas Techi´s</title>
+    <title>Carta</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/litera/bootstrap.min.css">
     <link rel="stylesheet" href="../../CSS/diseñocarta.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -26,7 +37,12 @@ $result = mysqli_query($conn, $sql);
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -94,7 +110,7 @@ $result = mysqli_query($conn, $sql);
         </a>
     </div>
     <div class="carta">
-        <div class="busqueda">
+    <div class="busqueda">
             <input class="form-control" type="text" placeholder="Buscar producto">
             <button class="btn btn-danger">🔎</button>
             <label for="" class="form-label mt-4"></label>
@@ -103,13 +119,10 @@ $result = mysqli_query($conn, $sql);
                 <option>Precio</option>
                 <option>Nombre</option>
             </select>
-            <a href="#" id="mostrarPopup" class="carritocompras">
-                <img style="width: 50px;"
-                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpngimg.com%2Fuploads%2Fshopping_cart%2Fshopping_cart_PNG38.png&f=1&nofb=1&ipt=f5553ad14ca3d4dc9bfcd3898be75b7077eb5aef03d854f9398cc70e671d796d&ipo=images"
-                    alt="">
-                <strong>3</strong>
-                <strong>- Carrito</strong>
-            </a>
+            <a href="../carrito.php" id="mostrarPopup" class="carritocompras">
+                    <img style="width: 50px;" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpngimg.com%2Fuploads%2Fshopping_cart%2Fshopping_cart_PNG38.png&f=1&nofb=1&ipt=f5553ad14ca3d4dc9bfcd3898be75b7077eb5aef03d854f9398cc70e671d796d&ipo=images" alt="">
+                    <strong>Ver carrito [<?php echo $cantidad_productos; ?>]</strong>
+                </a>
         </div>
         <div class="contenedor">
             <?php
@@ -131,7 +144,7 @@ $result = mysqli_query($conn, $sql);
                 echo '<p>' . $row['P_desc'] . '</p>';
                 echo '<strong>S/. ' . $row['P_precio'] . '</strong>';
                 echo '<br>';
-                echo '<button class="btn btn-danger">Añadir al carrito</button>';
+                echo '<button class="btn btn-danger addToCart" data-product-id="' . $row['P_id'] . '">Añadir al carrito</button>';
                 echo '</div>';
 
                 $count++;
@@ -181,27 +194,23 @@ $result = mysqli_query($conn, $sql);
     </div>
 
     <script>
-        const mostrarPopup = document.getElementById('mostrarPopup');
-        const popup = document.getElementById('popup');
-        const cerrarPopup = document.getElementById('cerrarPopup');
+        $(document).ready(function() {
+            $('.addToCart').on('click', function() {
+                // Obten el ID del producto desde el botón
+                var productId = $(this).data('product-id');
 
-        // Mostrar el popup al hacer clic en el enlace
-        mostrarPopup.addEventListener('click', () => {
-            popup.style.display = 'block';
-        });
+                // Realiza una solicitud AJAX al servidor para agregar el producto al carrito
+                $.post('agregar_al_carrito.php', { product_id: productId }, function(data) {
+                    
 
-        // Cerrar el popup al hacer clic en la "X"
-        cerrarPopup.addEventListener('click', () => {
-            popup.style.display = 'none';
+                    // Recarga la página después de un breve retraso (puedes ajustar el tiempo según tus preferencias)
+                    setTimeout(function() {
+                        location.reload();
+                    }, 100); // Recarga la página después de 1 segundo (1000 milisegundos)
+                });
+            });
         });
-
-        // Cerrar el popup al hacer clic fuera de él (en el fondo oscuro)
-        window.addEventListener('click', (event) => {
-            if (event.target === popup) {
-                popup.style.display = 'none';
-            }
-        });
-    </script>
+        </script>
 </body>
 <footer>
     <div class="divfooter">

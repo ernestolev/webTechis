@@ -1,3 +1,6 @@
+body{
+    font-family: 'Ysabeau Infant', sans-serif;
+}
 .navbar {
     background-color: rgb(245, 245, 245);
     height: 60px;
@@ -40,6 +43,8 @@
 .nav-link {
     margin-left: 20px;
     transition: font-size 0.5s;
+    font-family: 'Ysabeau Infant', sans-serif;
+
 }
 
 .titnav {
@@ -47,6 +52,8 @@
     font-size: 36px;
     font-weight: bold;
     margin-left: 150px;
+    font-family: 'Ysabeau Infant', sans-serif;
+
 }
 
 .itemsnav li {
@@ -68,6 +75,8 @@
     width: 100%;
     height: auto;
     margin-top: 0px;
+    font-family: 'Ysabeau Infant', sans-serif;
+
 }
 
 .divfooter a {
@@ -156,6 +165,17 @@
 .dpdow {
     color: black;
     margin: 10px;
+    font-family: 'Ysabeau Infant', sans-serif;
+
+}
+.dropdown-menu.show {
+    display: block;
+    font-family: 'Ysabeau Infant', sans-serif;
+    background-color: bisque;
+}
+
+.dropdown-menu.show a:hover {
+    color: blue;
 }
 
 .OPCMOV {

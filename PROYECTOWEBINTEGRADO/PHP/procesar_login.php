@@ -17,13 +17,13 @@ if ($stmt->execute()) {
 
     if ($result->num_rows === 1) {
         $row = $result->fetch_assoc();
-        $nombreUsuario = $row['nombre']; // Obtén el nombre del usuario
-        $rolUsuario = $row['rol']; // Obtén el rol del usuario
+        $nombreUsuario = $row['nombre']; 
+        $rolUsuario = $row['rol']; 
 
         session_start();
-        $_SESSION['user'] = $user;
-        $_SESSION['nombre_usuario'] = $nombreUsuario; // Establece la variable de sesión
-        $_SESSION['rol'] = $rolUsuario; // Establece la variable de sesión para el rol
+        $_SESSION['user'] = $row['id'];
+        $_SESSION['nombre_usuario'] = $nombreUsuario; 
+        $_SESSION['rol'] = $rolUsuario; 
 
         echo '<script>
                 alert("Inicio de sesión exitoso. Bienvenido, ' . $nombreUsuario . '.");

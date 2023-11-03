@@ -1,6 +1,7 @@
 .navbar {
     background-color: rgb(245, 245, 245);
     height: 60px;
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 
 .titnavv:hover,
@@ -161,7 +162,6 @@
     
 }
 
-/* Estilo de la barra lateral */
 .sidebar {
     width: 270px;
     background-color: rgba(194, 142, 143, 255);
@@ -171,6 +171,7 @@
     height: 98vh;
     margin-top: 5px;
     margin-left: 10px;
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 
 .sidebar .logo {
@@ -218,6 +219,7 @@
     border-radius: 20px;
     margin-bottom: 20px;
     text-align: center;
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 
 .user-info h2 {
@@ -231,6 +233,7 @@
     height: 85vh;
     border-radius: 20px;
     border-bottom: 1px solid #ccc;
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 
 .main-content h3 {
@@ -412,6 +415,9 @@
 }
 .itemPDB{
     padding: 30px;
+}
+.table button {
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 @media (max-width: 768px) {
     .titnav {

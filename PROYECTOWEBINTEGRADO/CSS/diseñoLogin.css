@@ -4,6 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 
 .login-container {
@@ -15,6 +16,7 @@ body {
     padding: 30px;
     background-color: white;
     border-radius: 40px;
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 
 .login-container-reclamo {
@@ -27,6 +29,7 @@ body {
     padding: 30px;
     background-color: white;
     border-radius: 40px;
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 
 
@@ -34,6 +37,7 @@ body {
     margin-right: 20px;
     margin-left: 20px;
     margin-bottom: 20px;
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 
 .label-log {
@@ -48,6 +52,7 @@ body {
     margin-top: 20px;
     float: right;
     font-size: 20px;
+    font-family: 'Ysabeau Infant', sans-serif;  
 }
 
 .log-items .btn:hover {

@@ -1,3 +1,6 @@
+body{
+    font-family: 'Ysabeau Infant', sans-serif;
+}
 .navbar {
     background-color: rgb(245, 245, 245);
     height: 60px;
@@ -21,7 +24,7 @@
 .imgred1:hover {
     text-decoration: none;
     color: black;
-    width: 65px;
+    scale: 120%;
     margin-right: 115px;
 }
 
@@ -29,7 +32,7 @@
 .imgred3:hover {
     text-decoration: none;
     color: black;
-    width: 60px;
+    scale: 120%;
 }
 
 .dropdown-item {
@@ -40,6 +43,7 @@
 .nav-link {
     margin-left: 20px;
     transition: font-size 0.5s;
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 
 .titnav {
@@ -47,6 +51,7 @@
     font-size: 36px;
     font-weight: bold;
     margin-left: 150px;
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 
 .itemsnav li {
@@ -73,6 +78,7 @@
     height: 58px;
     padding: 8px;
     background-color: rgb(245, 245, 245);
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 
 .divfooter a {
@@ -108,14 +114,29 @@
 .dpdow {
     color: black;
     margin: 10px;
+    font-family: 'Ysabeau Infant', sans-serif;
+
 }
 
+.dropdown-menu.show {
+    display: block;
+    font-family: 'Ysabeau Infant', sans-serif;
+    background-color: bisque;
+}
+
+.dropdown-menu.show a:hover {
+    color: blue;
+}
 .OPCMOV {
     display: none;
+    font-family: 'Ysabeau Infant', sans-serif;
+
 }
 
 .OPCMOV .dpdow {
     font-size: 25px;
+    font-family: 'Ysabeau Infant', sans-serif;
+
 }
 
 .secciones {
@@ -125,6 +146,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 
 .secciones img {
@@ -164,6 +186,7 @@
     width: 100%;
     display: flex;
     margin-top: 50px;
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 
 .busqueda input {
@@ -198,6 +221,7 @@
     padding-left: 00px;
     padding-right: 00px;
     margin: 10px auto;
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 
 .columna {
@@ -225,9 +249,10 @@
     border-radius: 30px;
     padding: 10px;
     box-sizing: border-box;
-    width: 350px;
+    width: 300px;
     margin: 10px 25px; 
     transition: transform 0.18s ease-in-out;
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 
 
@@ -238,23 +263,28 @@
 
 .elemento p {
     padding: 20px;
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 
 .elemento img {
-    width: 250px;
-    height: 300px;
-    object-fit: scale-down;
+    width: 271px;
+    height: 257px;
+    margin: 40px 10px;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 .elemento button {
     width: 70%;
     margin-bottom: 20px;
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 
 .elemento button:hover {
     margin-bottom: 20px;
     background-color: rgba(194, 142, 143, 255);
 }
+
 
 .popup {
     display: none;
@@ -539,9 +569,10 @@ a#mostrarPopup:hover {
     }
 
     .elemento img {
-        width: 200px;
-        height: 300px;
-        object-fit: scale-down;
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 20px;
     }
 
     .elemento button {

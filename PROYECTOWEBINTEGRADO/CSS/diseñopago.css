@@ -1,6 +1,7 @@
 .navbar {
     background-color: rgb(245, 245, 245);
     height: 60px;
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 
 .titnavv:hover,
@@ -21,7 +22,7 @@
 .imgred1:hover {
     text-decoration: none;
     color: black;
-    width: 65px;
+    scale: 120%;
     margin-right: 115px;
 }
 
@@ -29,7 +30,7 @@
 .imgred3:hover {
     text-decoration: none;
     color: black;
-    width: 60px;
+    scale: 120%;
 }
 
 .dropdown-item {
@@ -47,6 +48,7 @@
     font-size: 36px;
     font-weight: bold;
     margin-left: 150px;
+    font-family: 'Ysabeau Infant', sans-serif;
 }
 
 .itemsnav li {
@@ -58,6 +60,7 @@
 .itemsnav a,
 .divfooter a {
     color: rgba(194, 142, 143, 255);
+    font-family: 'Ysabeau Infant', sans-serif;
 
 }
 
@@ -100,27 +103,6 @@
 .imgred1 {
     margin-right: 120px;
 }
-
-.gallery-container {
-    position: relative;
-    overflow: hidden;
-}
-
-.gallery {
-    display: flex;
-    transition: transform 1.5s ease-in-out;
-}
-
-.gallery img {
-    max-width: 100%;
-    height: auto;
-}
-
-.gallery-item {
-    flex: 0 0 auto;
-    opacity: 0;
-}
-
 
 
 .next-button {
@@ -376,8 +358,12 @@ a#mostrarPopup:hover {
     background-color: white;
     border-radius: 40px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    font-family: 'Ysabeau Infant', sans-serif;
 }
-
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    font-family: 'Ysabeau Infant', sans-serif;
+}
 .pago-check {
     margin: 100px auto;
     width: 400px;
@@ -391,7 +377,8 @@ a#mostrarPopup:hover {
 }
 
 .login-container button {
-    transform: translateY(-120%);
+    transform: translateY(0%);
+    border-radius: 12px;
 }
 
 .labels-log {
@@ -428,6 +415,24 @@ a#mostrarPopup:hover {
     border-radius: 10%;
 }
 
+
+
+.botones_carrito{
+    margin-top: 0px;
+    transform: translateY(-60px);
+    
+}
+.botones_carrito button{
+    margin-left: 20px;
+    
+}
+.recojoDiv, .deliveryDiv{
+    display: none;
+}
+
+.recojo{
+    display: inline;
+}
 @media (max-width: 768px) {
     .titnav {
         font-size: 30px;
@@ -753,7 +758,8 @@ a#mostrarPopup:hover {
     }
 
     .login-container button {
-        transform: translateY(-120%);
+        transform: translateY(0%);
+        border-radius: 13px;
     }
 
     .labels-log {

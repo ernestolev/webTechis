@@ -6,8 +6,19 @@ if (!isset($_SESSION['user'])) {
     header("Location: ../FORMS-LOGIN-REGISTRO/login.php");
 }
 
-$sql = "SELECT P_imagen, P_nom, P_desc, P_precio FROM productos WHERE P_tipo = 'bebida'";
+$sql = "SELECT * FROM productos WHERE P_tipo = 'bebida'";
 $result = mysqli_query($conn, $sql);
+
+$userId = $_SESSION['user'];
+$countQuery = "SELECT COUNT(*) AS cantidad_productos FROM carrito WHERE U_id = '$userId'";
+$countResult = mysqli_query($conn, $countQuery);
+
+if ($countResult) {
+    $row = mysqli_fetch_assoc($countResult);
+    $cantidad_productos = $row['cantidad_productos'];
+} else {
+    $cantidad_productos = 0;
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -15,7 +26,7 @@ $result = mysqli_query($conn, $sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tortas Techi´s</title>
+    <title>Carta</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/litera/bootstrap.min.css">
     <link rel="stylesheet" href="../../CSS/diseñocarta.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -26,7 +37,12 @@ $result = mysqli_query($conn, $sql);
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -95,7 +111,7 @@ $result = mysqli_query($conn, $sql);
         </a>
     </div>
     <div class="carta">
-        <div class="busqueda">
+    <div class="busqueda">
             <input class="form-control" type="text" placeholder="Buscar producto">
             <button class="btn btn-danger">🔎</button>
             <label for="" class="form-label mt-4"></label>
@@ -104,13 +120,10 @@ $result = mysqli_query($conn, $sql);
                 <option>Precio</option>
                 <option>Nombre</option>
             </select>
-            <a href="#" id="mostrarPopup" class="carritocompras">
-                <img style="width: 50px;"
-                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpngimg.com%2Fuploads%2Fshopping_cart%2Fshopping_cart_PNG38.png&f=1&nofb=1&ipt=f5553ad14ca3d4dc9bfcd3898be75b7077eb5aef03d854f9398cc70e671d796d&ipo=images"
-                    alt="">
-                <strong>3</strong>
-                <strong>- Carrito</strong>
-            </a>
+            <a href="../carrito.php" id="mostrarPopup" class="carritocompras">
+                    <img style="width: 50px;" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpngimg.com%2Fuploads%2Fshopping_cart%2Fshopping_cart_PNG38.png&f=1&nofb=1&ipt=f5553ad14ca3d4dc9bfcd3898be75b7077eb5aef03d854f9398cc70e671d796d&ipo=images" alt="">
+                    <strong>Ver carrito [<?php echo $cantidad_productos; ?>]</strong>
+                </a>
         </div>
         <div class="contenedor">
             <?php
@@ -132,7 +145,7 @@ $result = mysqli_query($conn, $sql);
                 echo '<p>' . $row['P_desc'] . '</p>';
                 echo '<strong>S/. ' . $row['P_precio'] . '</strong>';
                 echo '<br>';
-                echo '<button class="btn btn-danger">Añadir al carrito</button>';
+                echo '<button class="btn btn-danger addToCart" data-product-id="' . $row['P_id'] . '">Añadir al carrito</button>';
                 echo '</div>';
 
                 $count++;
@@ -140,71 +153,26 @@ $result = mysqli_query($conn, $sql);
             ?>
         </div>
     </div>
-    <div id="popup" class="popup">
-        <div class="popup-contenido">
-            <span class="cerrar-popup" id="cerrarPopup">&times;</span>
-            <h2>Tu carrito</h2>
-            <p>Aquí podras visualizar tu carrito.</p>
-            <div class="item-carrito">
-                <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.recepti.com%2Fimages%2Fstories%2Fkuvar%2Ftorte%2F04595-torta-elizabeta_zoom.jpg&f=1&nofb=1&ipt=55ce9297206ca6d42867a68adca6a54dd2f3826e47aa4323b7a82dc90b61b57a&ipo=images"
-                    alt="">
-                <h5>Torta de chocolate</h5>
-                <strong>S/. 40</strong>
-                <br>
-                <button class="btn btn-danger">+</button>
-                <button class="btn btn-secondary">-</button>
-                <input type="text" name="" id="" class="form-control" value="1">
-            </div>
-            <div class="item-carrito">
-                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fres.cloudinary.com%2Friqra%2Fimage%2Fupload%2Fv1570825663%2Fsellers%2Fil-pastificio%2Fproducts%2Fsvo9wsy9fvitctrf3p8e.png&f=1&nofb=1&ipt=697401ecc0d01b2f9a09f71f4fb14505e156f083ea36fe8406cd7d412af1fba4&ipo=images"
-                    alt="">
-                <h5>Porcion de chocolate</h5>
-                <strong>S/. 9</strong>
-                <br>
-                <button class="btn btn-danger">+</button>
-                <button class="btn btn-secondary">-</button>
-                <input type="text" name="" id="" class="form-control" value="1">
-            </div>
-            <div class="item-carrito">
-                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftrigodeoro.com.pe%2Fwp-content%2Fuploads%2F2020%2F09%2Fvaso-chicha-trigo-de-oro.png&f=1&nofb=1&ipt=90ce09a14ab8a145e5ce17ab0f0d5120d9cedf082954f71b4f4196207a1cff15&ipo=images"
-                    alt="">
-                <h5>Vaso de chicha morada</h5>
-                <strong>S/. 7</strong>
-                <br>
-                <button class="btn btn-danger">+</button>
-                <button class="btn btn-secondary">-</button>
-                <input type="text" name="" id="" class="form-control" value="1">
-            </div>
-            <div class="resumen-carrito">
-                <h5>Resumen:</h5>
-                <strong class="precio-resumen">S/. 56</strong>
-                <a href="/HTML/pagar.html"><button class="btn btn-danger">Pagar</button></a>                </div>
-        </div>
-
-    </div>
+   
 
     <script>
-        const mostrarPopup = document.getElementById('mostrarPopup');
-        const popup = document.getElementById('popup');
-        const cerrarPopup = document.getElementById('cerrarPopup');
+        $(document).ready(function() {
+            $('.addToCart').on('click', function() {
+                // Obten el ID del producto desde el botón
+                var productId = $(this).data('product-id');
 
-        // Mostrar el popup al hacer clic en el enlace
-        mostrarPopup.addEventListener('click', () => {
-            popup.style.display = 'block';
-        });
+                // Realiza una solicitud AJAX al servidor para agregar el producto al carrito
+                $.post('agregar_al_carrito.php', { product_id: productId }, function(data) {
+                    
 
-        // Cerrar el popup al hacer clic en la "X"
-        cerrarPopup.addEventListener('click', () => {
-            popup.style.display = 'none';
+                    // Recarga la página después de un breve retraso (puedes ajustar el tiempo según tus preferencias)
+                    setTimeout(function() {
+                        location.reload();
+                    }, 100); // Recarga la página después de 1 segundo (1000 milisegundos)
+                });
+            });
         });
-
-        // Cerrar el popup al hacer clic fuera de él (en el fondo oscuro)
-        window.addEventListener('click', (event) => {
-            if (event.target === popup) {
-                popup.style.display = 'none';
-            }
-        });
-    </script>
+        </script>
 </body>
 <footer>
     <div class="divfooter">
